@@ -1,28 +1,91 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
-</template>
-
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import SimpleButton from './components/SimpleButton.vue'
+import SimpleBlock from './components/SimpleBlock.vue'
 
 export default {
-  name: "App",
-  components: {
-    HelloWorld,
-  },
-};
+  name: 'App',
+  components: { SimpleButton, SimpleBlock },
+}
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<template>
+  <div class="min-w-screen min-h-screen bg-gray-200">
+    <div class="flex flex-wrap">
+      <SimpleBlock class="mt-0 pt-8">
+        <p>default</p>
+        <SimpleButton>Wow</SimpleButton>
+      </SimpleBlock>
+      <SimpleBlock>
+        <p>big</p>
+        <SimpleButton big>Wow</SimpleButton>
+      </SimpleBlock>
+      <SimpleBlock>
+        <p>small</p>
+        <SimpleButton small>Wow</SimpleButton>
+      </SimpleBlock>
+      <SimpleBlock>
+        <p>outline</p>
+        <SimpleButton outline>Wow</SimpleButton>
+      </SimpleBlock>
+      <SimpleBlock>
+        <p>big outline</p>
+        <SimpleButton big outline>Wow</SimpleButton>
+      </SimpleBlock>
+      <SimpleBlock>
+        <p>small outline</p>
+        <SimpleButton small outline>Wow</SimpleButton>
+      </SimpleBlock>
+      <SimpleBlock>
+        <p>big rounded</p>
+        <SimpleButton big rounded>Wow</SimpleButton>
+      </SimpleBlock>
+      <SimpleBlock>
+        <p>styles override</p>
+        <SimpleButton
+          class="bg-blue-200 font-thin border-green-200 text-red-900"
+        >
+          Wow
+        </SimpleButton>
+      </SimpleBlock>
+    </div>
+    <div class="flex flex-wrap">
+      <SimpleBlock class="mt-0 pt-8">
+        <p>default</p>
+        <SimpleButton dark>Wow</SimpleButton>
+      </SimpleBlock>
+      <SimpleBlock>
+        <p>big</p>
+        <SimpleButton dark big>Wow</SimpleButton>
+      </SimpleBlock>
+      <SimpleBlock>
+        <p>small</p>
+        <SimpleButton small dark>Wow</SimpleButton>
+      </SimpleBlock>
+      <SimpleBlock>
+        <p>outline</p>
+        <SimpleButton dark outline>Wow</SimpleButton>
+      </SimpleBlock>
+      <SimpleBlock>
+        <p>big outline</p>
+        <SimpleButton dark big outline>Wow</SimpleButton>
+      </SimpleBlock>
+      <SimpleBlock>
+        <p>small outline</p>
+        <SimpleButton dark small outline>Wow</SimpleButton>
+      </SimpleBlock>
+      <SimpleBlock>
+        <p>big rounded</p>
+        <SimpleButton dark big rounded>Wow</SimpleButton>
+      </SimpleBlock>
+      <SimpleBlock>
+        <p>styles override</p>
+        <SimpleButton
+          dark
+          class="bg-blue-200 font-thin border-green-200 text-red-900"
+        >
+          Wow
+        </SimpleButton>
+      </SimpleBlock>
+    </div>
+  </div>
+</template>
