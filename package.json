@@ -1,0 +1,8 @@
+{
+  "name": "tailwind-vue-components-usage",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:mi544/tailwind-vue-components-usage.git",
+  "author": "Maksim Verkhoturov <sd32@protonmail.com>",
+  "license": "MIT"
+}
