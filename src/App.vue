@@ -1,10 +1,11 @@
 <script>
 import SimpleButton from './components/SimpleButton.vue'
 import SimpleBlock from './components/SimpleBlock.vue'
+import DifferentButton from './components/DifferentButton'
 
 export default {
   name: 'App',
-  components: { SimpleButton, SimpleBlock },
+  components: { SimpleButton, SimpleBlock, DifferentButton },
 }
 </script>
 
@@ -86,6 +87,10 @@ export default {
           Wow
         </SimpleButton>
       </SimpleBlock>
+    </div>
+    <div class="flex flex-wrap">
+      <DifferentButton app="admin">Wow</DifferentButton>
+      <DifferentButton app="web">Wow</DifferentButton>
     </div>
   </div>
 </template>
