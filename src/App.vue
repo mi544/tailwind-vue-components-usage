@@ -1,84 +1,99 @@
 <script>
+import PMain from './components/PMain.vue'
+import PBlock from './components/PBlock.vue'
+import PTitle from './components/PTitle.vue'
 import SimpleButton from './components/SimpleButton.vue'
-import SimpleBlock from './components/SimpleBlock.vue'
+import PWrapper from './components/PWrapper.vue'
 import DifferentButton from './components/DifferentButton'
+import PLineBreak from './components/PLineBreak.vue'
 
 export default {
   name: 'App',
-  components: { SimpleButton, SimpleBlock, DifferentButton },
+  components: {
+    PMain,
+    SimpleButton,
+    PWrapper,
+    DifferentButton,
+    PLineBreak,
+    PBlock,
+    PTitle,
+  },
 }
 </script>
 
 <template>
-  <div class="min-w-screen min-h-screen bg-gray-200">
-    <div class="flex flex-wrap">
-      <SimpleBlock class="mt-0 pt-8">
+  <PMain>
+    <PTitle>Light</PTitle>
+    <PBlock>
+      <PWrapper class="mt-0 pt-8">
         <p>default</p>
         <SimpleButton>Wow</SimpleButton>
-      </SimpleBlock>
-      <SimpleBlock>
+      </PWrapper>
+      <PWrapper>
         <p>big</p>
         <SimpleButton big>Wow</SimpleButton>
-      </SimpleBlock>
-      <SimpleBlock>
+      </PWrapper>
+      <PWrapper>
         <p>small</p>
         <SimpleButton small>Wow</SimpleButton>
-      </SimpleBlock>
-      <SimpleBlock>
+      </PWrapper>
+      <PWrapper>
         <p>outline</p>
         <SimpleButton outline>Wow</SimpleButton>
-      </SimpleBlock>
-      <SimpleBlock>
+      </PWrapper>
+      <PWrapper>
         <p>big outline</p>
         <SimpleButton big outline>Wow</SimpleButton>
-      </SimpleBlock>
-      <SimpleBlock>
+      </PWrapper>
+      <PWrapper>
         <p>small outline</p>
         <SimpleButton small outline>Wow</SimpleButton>
-      </SimpleBlock>
-      <SimpleBlock>
+      </PWrapper>
+      <PWrapper>
         <p>big rounded</p>
         <SimpleButton big rounded>Wow</SimpleButton>
-      </SimpleBlock>
-      <SimpleBlock>
+      </PWrapper>
+      <PWrapper>
         <p>styles override</p>
         <SimpleButton
           class="bg-blue-200 font-thin border-green-200 text-red-900"
         >
           Wow
         </SimpleButton>
-      </SimpleBlock>
-    </div>
-    <div class="flex flex-wrap">
-      <SimpleBlock class="mt-0 pt-8">
+      </PWrapper>
+    </PBlock>
+    <PLineBreak />
+    <PTitle>Dark</PTitle>
+    <PBlock>
+      <PWrapper class="mt-0 pt-8">
         <p>default</p>
         <SimpleButton dark>Wow</SimpleButton>
-      </SimpleBlock>
-      <SimpleBlock>
+      </PWrapper>
+      <PWrapper>
         <p>big</p>
         <SimpleButton dark big>Wow</SimpleButton>
-      </SimpleBlock>
-      <SimpleBlock>
+      </PWrapper>
+      <PWrapper>
         <p>small</p>
-        <SimpleButton small dark>Wow</SimpleButton>
-      </SimpleBlock>
-      <SimpleBlock>
+        <SimpleButton dark small>Wow</SimpleButton>
+      </PWrapper>
+      <PWrapper>
         <p>outline</p>
         <SimpleButton dark outline>Wow</SimpleButton>
-      </SimpleBlock>
-      <SimpleBlock>
+      </PWrapper>
+      <PWrapper>
         <p>big outline</p>
         <SimpleButton dark big outline>Wow</SimpleButton>
-      </SimpleBlock>
-      <SimpleBlock>
+      </PWrapper>
+      <PWrapper>
         <p>small outline</p>
         <SimpleButton dark small outline>Wow</SimpleButton>
-      </SimpleBlock>
-      <SimpleBlock>
+      </PWrapper>
+      <PWrapper>
         <p>big rounded</p>
         <SimpleButton dark big rounded>Wow</SimpleButton>
-      </SimpleBlock>
-      <SimpleBlock>
+      </PWrapper>
+      <PWrapper>
         <p>styles override</p>
         <SimpleButton
           dark
@@ -86,11 +101,21 @@ export default {
         >
           Wow
         </SimpleButton>
-      </SimpleBlock>
-    </div>
-    <div class="flex flex-wrap">
-      <DifferentButton app="admin">Wow</DifferentButton>
-      <DifferentButton app="web">Wow</DifferentButton>
-    </div>
-  </div>
+      </PWrapper>
+    </PBlock>
+    <PLineBreak />
+    <PTitle>Renderless</PTitle>
+    <PBlock>
+      <PWrapper>
+        <DifferentButton app="admin">Wow</DifferentButton>
+      </PWrapper>
+      <PWrapper>
+        <DifferentButton app="web">Wow</DifferentButton>
+      </PWrapper>
+    </PBlock>
+    <PLineBreak />
+    <PBlock>
+      <PTitle>Something else..?</PTitle>
+    </PBlock>
+  </PMain>
 </template>

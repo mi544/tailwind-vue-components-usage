@@ -1,11 +1,11 @@
 <script>
 export default {
-  name: 'SimpleBlock',
+  name: 'PBlock',
 }
 </script>
 
 <template>
-  <div class="m-auto w-max my-8 flex-col items-center">
+  <div class="flex flex-wrap">
     <slot />
   </div>
 </template>
