@@ -1,11 +1,10 @@
 <script>
 import PMain from './components/PMain.vue'
 import PBlock from './components/PBlock.vue'
-import PTitle from './components/PTitle.vue'
 import SimpleButton from './components/SimpleButton.vue'
 import PWrapper from './components/PWrapper.vue'
-import DifferentButton from './components/DifferentButton'
-import PLineBreak from './components/PLineBreak.vue'
+import DifferentButton from './components/DifferentButton/index.js'
+import RenderlessButton from './components/RenderlessButton.js'
 
 export default {
   name: 'App',
@@ -14,17 +13,17 @@ export default {
     SimpleButton,
     PWrapper,
     DifferentButton,
-    PLineBreak,
     PBlock,
-    PTitle,
+    RenderlessButton,
   },
 }
 </script>
 
 <template>
   <PMain>
-    <PTitle>Light</PTitle>
-    <PBlock>
+    <!-- option 1 -->
+    <!-- light theme -->
+    <PBlock title="Light">
       <PWrapper class="mt-0 pt-8">
         <p>default</p>
         <SimpleButton>Wow</SimpleButton>
@@ -62,9 +61,8 @@ export default {
         </SimpleButton>
       </PWrapper>
     </PBlock>
-    <PLineBreak />
-    <PTitle>Dark</PTitle>
-    <PBlock>
+    <!-- dark theme -->
+    <PBlock title="Dark">
       <PWrapper class="mt-0 pt-8">
         <p>default</p>
         <SimpleButton dark>Wow</SimpleButton>
@@ -103,19 +101,51 @@ export default {
         </SimpleButton>
       </PWrapper>
     </PBlock>
-    <PLineBreak />
-    <PTitle>Renderless</PTitle>
-    <PBlock>
+    <!-- option 2 -->
+    <PBlock title="Renderless">
       <PWrapper>
+        <p>admin</p>
         <DifferentButton app="admin">Wow</DifferentButton>
       </PWrapper>
       <PWrapper>
+        <p>web</p>
         <DifferentButton app="web">Wow</DifferentButton>
       </PWrapper>
+      <PWrapper>
+        <p>styles override</p>
+        <DifferentButton
+          class="bg-blue-200 font-thin border-green-200 text-red-900"
+        >
+          Wow
+        </DifferentButton>
+      </PWrapper>
     </PBlock>
-    <PLineBreak />
-    <PBlock>
-      <PTitle>Something else..?</PTitle>
+    <!-- option 3 -->
+    <PBlock title="Renderless (2)">
+      <PWrapper>
+        <p>default</p>
+        <RenderlessButton>Wow</RenderlessButton>
+      </PWrapper>
+      <PWrapper>
+        <p>big</p>
+        <RenderlessButton tag="big">Wow</RenderlessButton>
+      </PWrapper>
+      <PWrapper>
+        <p>small</p>
+        <RenderlessButton tag="small">Wow</RenderlessButton>
+      </PWrapper>
+      <PWrapper>
+        <p>outline</p>
+        <RenderlessButton tag="outline">Wow</RenderlessButton>
+      </PWrapper>
+      <PWrapper>
+        <p>styles override</p>
+        <RenderlessButton
+          class="bg-blue-200 font-thin border-green-200 text-red-900"
+        >
+          Wow
+        </RenderlessButton>
+      </PWrapper>
     </PBlock>
   </PMain>
 </template>
