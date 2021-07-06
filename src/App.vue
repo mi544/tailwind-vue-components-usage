@@ -24,36 +24,28 @@ export default {
     <!-- option 1 -->
     <!-- light theme -->
     <PBlock title="Light">
-      <PWrapper class="mt-0 pt-8">
-        <p>default</p>
+      <PWrapper class="mt-0 pt-8" title="default">
         <SimpleButton>Wow</SimpleButton>
       </PWrapper>
-      <PWrapper>
-        <p>big</p>
+      <PWrapper title="big">
         <SimpleButton big>Wow</SimpleButton>
       </PWrapper>
-      <PWrapper>
-        <p>small</p>
+      <PWrapper title="small">
         <SimpleButton small>Wow</SimpleButton>
       </PWrapper>
-      <PWrapper>
-        <p>outline</p>
+      <PWrapper title="outline">
         <SimpleButton outline>Wow</SimpleButton>
       </PWrapper>
-      <PWrapper>
-        <p>big outline</p>
+      <PWrapper title="big outline">
         <SimpleButton big outline>Wow</SimpleButton>
       </PWrapper>
-      <PWrapper>
-        <p>small outline</p>
+      <PWrapper title="small outline">
         <SimpleButton small outline>Wow</SimpleButton>
       </PWrapper>
-      <PWrapper>
-        <p>big rounded</p>
+      <PWrapper title="big rounded">
         <SimpleButton big rounded>Wow</SimpleButton>
       </PWrapper>
-      <PWrapper>
-        <p>styles override</p>
+      <PWrapper title="styles override">
         <SimpleButton
           class="bg-blue-200 font-thin border-green-200 text-red-900"
         >
@@ -63,36 +55,28 @@ export default {
     </PBlock>
     <!-- dark theme -->
     <PBlock title="Dark">
-      <PWrapper class="mt-0 pt-8">
-        <p>default</p>
+      <PWrapper class="mt-0 pt-8" title="default">
         <SimpleButton dark>Wow</SimpleButton>
       </PWrapper>
-      <PWrapper>
-        <p>big</p>
+      <PWrapper title="big">
         <SimpleButton dark big>Wow</SimpleButton>
       </PWrapper>
-      <PWrapper>
-        <p>small</p>
+      <PWrapper title="small">
         <SimpleButton dark small>Wow</SimpleButton>
       </PWrapper>
-      <PWrapper>
-        <p>outline</p>
+      <PWrapper title="outline">
         <SimpleButton dark outline>Wow</SimpleButton>
       </PWrapper>
-      <PWrapper>
-        <p>big outline</p>
+      <PWrapper title="big outline">
         <SimpleButton dark big outline>Wow</SimpleButton>
       </PWrapper>
-      <PWrapper>
-        <p>small outline</p>
+      <PWrapper title="small outline">
         <SimpleButton dark small outline>Wow</SimpleButton>
       </PWrapper>
-      <PWrapper>
-        <p>big rounded</p>
+      <PWrapper title="big rounded">
         <SimpleButton dark big rounded>Wow</SimpleButton>
       </PWrapper>
-      <PWrapper>
-        <p>styles override</p>
+      <PWrapper title="styles override">
         <SimpleButton
           dark
           class="bg-blue-200 font-thin border-green-200 text-red-900"
@@ -103,18 +87,24 @@ export default {
     </PBlock>
     <!-- option 2 -->
     <PBlock title="Renderless">
-      <PWrapper>
-        <p>admin</p>
+      <PWrapper title="admin">
         <DifferentButton app="admin">Wow</DifferentButton>
       </PWrapper>
-      <PWrapper>
-        <p>web</p>
+      <PWrapper title="admin (styles override)">
+        <DifferentButton
+          app="admin"
+          class="bg-white font-black font-thin border-black"
+        >
+          Wow
+        </DifferentButton>
+      </PWrapper>
+      <PWrapper title="web">
         <DifferentButton app="web">Wow</DifferentButton>
       </PWrapper>
-      <PWrapper>
-        <p>styles override</p>
+      <PWrapper title="web (styles override)">
         <DifferentButton
-          class="bg-blue-200 font-thin border-green-200 text-red-900"
+          app="web"
+          class="bg-black font-white font-thin border-blue-600"
         >
           Wow
         </DifferentButton>
@@ -122,24 +112,19 @@ export default {
     </PBlock>
     <!-- option 3 -->
     <PBlock title="Renderless (2)">
-      <PWrapper>
-        <p>default</p>
+      <PWrapper title="default">
         <RenderlessButton>Wow</RenderlessButton>
       </PWrapper>
-      <PWrapper>
-        <p>big</p>
+      <PWrapper title="big">
         <RenderlessButton tag="big">Wow</RenderlessButton>
       </PWrapper>
-      <PWrapper>
-        <p>small</p>
+      <PWrapper title="small">
         <RenderlessButton tag="small">Wow</RenderlessButton>
       </PWrapper>
-      <PWrapper>
-        <p>outline</p>
+      <PWrapper title="outline">
         <RenderlessButton tag="outline">Wow</RenderlessButton>
       </PWrapper>
-      <PWrapper>
-        <p>styles override</p>
+      <PWrapper title="styles override">
         <RenderlessButton
           class="bg-blue-200 font-thin border-green-200 text-red-900"
         >
