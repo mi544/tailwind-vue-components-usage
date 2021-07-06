@@ -87,6 +87,9 @@ export default {
     </PBlock>
     <!-- option 2 -->
     <PBlock title="Renderless">
+      <PWrapper title="default (admin)">
+        <DifferentButton>Wow</DifferentButton>
+      </PWrapper>
       <PWrapper title="admin">
         <DifferentButton app="admin">Wow</DifferentButton>
       </PWrapper>
